@@ -1,0 +1,12 @@
+syntax = "proto3";
+package hash;
+
+message Message {
+    string body = 1;
+}
+
+service HashService {
+    rpc Sha1Message(Message) returns (Message) {}
+    rpc Sha265Message(Message) returns (Message) {}
+    rpc Sha512Message(Message) returns (Message) {}
+}
