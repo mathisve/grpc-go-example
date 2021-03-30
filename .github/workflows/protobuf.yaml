@@ -13,7 +13,7 @@ jobs:
         uses: arduino/setup-protoc@v1
 
       - name: Install go protobuf
-        run: go install google.golang.org/protobuf/cmd/protoc-gen-go
+        run: go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 
       - name: Checkout code
         uses: actions/checkout@v2
