@@ -1,5 +1,6 @@
 syntax = "proto3";
 package hash;
+option go_package = "./hash";
 
 message Message {
     string body = 1;

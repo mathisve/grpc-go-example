@@ -24,7 +24,7 @@ message Message {
 To generate the `hash/hash.pb.go` file run:
 
 ```
-protoc --go_out=plugins=grpc:hash hash.proto
+protoc --go_out=. hash.proto
 ```
 
 ## Run it

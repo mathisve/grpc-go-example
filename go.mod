@@ -1,8 +1,8 @@
-module github.com/Mathisco-01/grpc-go-example
+module grpc-go-example
 
-go 1.14
+go 1.16
 
 require (
-	google.golang.org/grpc v1.34.0
-	google.golang.org/protobuf v1.25.0
+	github.com/Mathisco-01/grpc-go-example v0.0.0-20201228170056-7977e22d0b40
+	google.golang.org/grpc v1.36.1
 )
