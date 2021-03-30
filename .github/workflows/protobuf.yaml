@@ -1,0 +1,22 @@
+on: [push, pull_request]
+name: Proto
+jobs:
+  proto:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.16
+
+      - name: Install Protoc
+        uses: arduino/setup-protoc@v1
+
+      - name: Install go protobuf
+        run: go install google.golang.org/protobuf/cmd/protoc-gen-go
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Generate protobuf code
+        run: protoc --go_out=. hash.proto
